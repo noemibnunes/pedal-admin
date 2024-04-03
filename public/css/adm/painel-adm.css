@@ -1,0 +1,23 @@
+.main-painel {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+.section-painel {
+  text-align: center;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-box img {
+  width: 100px;
+}

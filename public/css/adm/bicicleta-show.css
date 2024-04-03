@@ -1,0 +1,10 @@
+.show-bicicleta {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+
+  #img {
+    height: 200px;
+    width: 300px
+}

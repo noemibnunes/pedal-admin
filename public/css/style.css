@@ -1,0 +1,26 @@
+@import "./global/global.css";
+@import "./utilidades/tipografia.css";
+@import "./utilidades/cores.css";
+@import "./utilidades/animacao.css";
+
+@import "./global/header.css";
+@import "./global/footer.css";
+
+/* Utilidades */
+@import "./utilidades/componentes.css";
+@import "./utilidades/formulario.css";
+
+/* Home */
+@import "./home/introducao.css";
+
+/* Contato */
+@import "./contato/contato.css";
+
+/* Login */
+@import "./login/login.css";
+
+/* Adm */
+@import "./adm/painel-adm.css";
+@import "./adm/bicicletas.css";
+@import "./adm/bicicleta-show.css";
+@import "./adm/bicicleta-form.css";
