@@ -41,7 +41,7 @@ class PlanoService
         return view('painel-adm.plano.plano-show', ['plano' => $plano]);
     }
 
-    public function editarBicicletaPlano($id, $request) 
+    public function editarPlano($id, $request) 
     {
         $plano = Plano::findOrFail($id);
 

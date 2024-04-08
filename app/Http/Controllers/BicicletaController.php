@@ -66,8 +66,7 @@ class BicicletaController extends Controller
     public function deleteBicicleta(int $id)
     {
         try {
-            $mensagem = $this->bicicletaService->deleteBicicleta($id);
-            return redirect()->back()->withErrors(['success' => $mensagem]);
+           return $this->bicicletaService->deleteBicicleta($id);
         } catch (Exception $exception) {
             return response()->json(['errors' => $exception->getMessage()], 400);
         }

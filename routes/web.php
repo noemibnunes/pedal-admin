@@ -22,10 +22,20 @@ Route::middleware(['auth'])->group(function () {
     ####### BICICLETA #######
     Route::get('/bicicleta-view', [BicicletaController::class, 'index'])->name('bicicleta-view');
     Route::get('/cadastro-view', [BicicletaController::class, 'cadastroView'])->name('cadastro-view');
-    Route::get('/bicicleta/{id}', [BicicletaController::class, 'show'])->name('show');
     Route::post('/cadastro-bicicleta', [BicicletaController::class, 'cadastroBicicleta'])->name('cadastro-bicicleta');
+    Route::get('/bicicleta/{id}', [BicicletaController::class, 'show'])->name('show');
     Route::get('/edit-view/{id}', [BicicletaController::class, 'editView'])->name('edit-view');
     Route::put('/edit-bicicleta/{id}', [BicicletaController::class, 'editarBicicleta'])->name('edit-bicicleta');
     Route::delete('/delete-bicicleta/{id}', [BicicletaController::class, 'deleteBicicleta'])->name('delete-bicicleta');
+
+    ####### PLANO #######
+    Route::get('/plano-view', [PlanoController::class, 'index'])->name('plano-view');
+    Route::get('/cadastro-plano-view', [PlanoController::class, 'cadastroView'])->name('cadastro-plano-view');
+    Route::post('/cadastro-plano', [PlanoController::class, 'cadastroPlano'])->name('cadastro-plano');
+    Route::get('/plano/{id}', [PlanoController::class, 'show'])->name('show-plano');
+    Route::get('/edit-plano-view/{id}', [PlanoController::class, 'editView'])->name('edit-plano-view');
+    Route::put('/edit-plano/{id}', [PlanoController::class, 'editarPlano'])->name('edit-plano');
+    Route::delete('/delete-plano/{id}', [PlanoController::class, 'deletePlano'])->name('delete-plano');
+
 });
 

@@ -21,6 +21,6 @@
 
 /* Adm */
 @import "./adm/painel-adm.css";
-@import "./adm/bicicletas.css";
-@import "./adm/bicicleta-show.css";
-@import "./adm/bicicleta-form.css";
+@import "./adm/all.css";
+@import "./adm/show.css";
+@import "./adm/form.css";

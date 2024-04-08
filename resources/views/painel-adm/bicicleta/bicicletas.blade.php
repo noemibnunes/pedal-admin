@@ -3,13 +3,13 @@
 @section('content')
   <main class="">
     <div class="container-cadastro">
-      <a href="{{ route('cadastro-view') }}" class="btn-cadastro-bicicleta">
+      <a href="{{ route('cadastro-view') }}" class="btn-cadastro">
         <img src="./img/icones/add.png"alt="Cadastrar bicicleta"> 
       </a>
     </div>
       
     
-    <table class="tabela-bicicletas">
+    <table class="tabelas">
       <h2 style="color:#fff;text-align:center;">Bicicletas</h2>
         <thead>
         <tr>
@@ -17,6 +17,7 @@
             <th>Disponibilidade</th>
             <th>Valor de Aluguel</th>
             <th>Tipo</th>
+            <th>Quantidades</th>
             <th>Usuário ADM</th>
             <th colspan = 3 style="text-align:center;">Ações</th> </tr>
         </thead>
@@ -25,8 +26,9 @@
             <tr>
             <td>{{ $bicicleta->modelo }}</td>
             <td>{{ $bicicleta->disponibilidade ? 'Disponível' : 'Indisponível' }}</td>
-            <td>{{ $bicicleta->valor_aluguel }}</td>
+            <td>R$ {{ $bicicleta->valor_aluguel }}</td>
             <td>{{ $bicicleta->tipo }}</td>
+            <td>{{ $bicicleta->quantidades }}</td>
             <td>{{ $bicicleta->userAdm->name }}</td>
             <td> 
               <a href="{{ route('show', $bicicleta->id) }}">

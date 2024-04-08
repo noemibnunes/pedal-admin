@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\UserAdm;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Plano extends Model
 {
@@ -23,4 +24,12 @@ class Plano extends Model
         'user_id'
     ];
 
+    ######################
+    # RELACIONAMENTOS
+    ######################
+
+    public function userAdm()
+    {
+        return $this->belongsTo(UserAdm::class, 'user_id', 'id');
+    }
 }

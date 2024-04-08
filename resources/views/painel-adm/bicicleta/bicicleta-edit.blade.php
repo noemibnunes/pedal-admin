@@ -24,6 +24,11 @@
       </div>
 
       <div class="form-group">
+            <label for="quantidades">Quantidades:</label>
+            <input type="text"class="form-control" name="quantidades"  value="{{ $bicicleta->quantidades }}" required>
+      </div>
+
+      <div class="form-group">
           <label for="imagem" class="label">Imagem: </label>
           <input type="file" class="form-control" name="imagem"/>
           <img src="{{ asset('storage/' .$bicicleta->imagem) }}" alt="Imagem da Bicicleta" style="margin-top:10px">

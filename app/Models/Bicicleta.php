@@ -22,6 +22,7 @@ class Bicicleta extends Model
         'disponibilidade',
         'valor_aluguel',
         'tipo',
+        'quantidades',
         'imagem',
         'user_id'
     ];

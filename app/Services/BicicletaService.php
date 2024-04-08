@@ -28,6 +28,7 @@ class BicicletaService
            'disponibilidade' => 1, // por padrão no cadastro ela está disponível
            'valor_aluguel' => $request->valor_aluguel,
            'tipo' => $request->tipo,
+           'quantidades' => $request->quantidades,
            'user_id' => $user->id
         ]);
 
@@ -54,6 +55,7 @@ class BicicletaService
         $bicicleta->modelo = $request->modelo;
         $bicicleta->valor_aluguel = $request->valor_aluguel;
         $bicicleta->tipo = $request->tipo;
+        $bicicleta->quantidades = $request->quantidades;
         $bicicleta->user_id = Auth::id();
 
         if ($request->hasFile('imagem')) {

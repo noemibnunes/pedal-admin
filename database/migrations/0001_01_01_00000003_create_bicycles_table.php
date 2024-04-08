@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('disponibilidade');
             $table->string('valor_aluguel');
             $table->string('tipo');
+            $table->string('quantidades');
             $table->string('imagem');
             $table->unsignedBigInteger('user_id'); 
             $table->foreign('user_id')->references('id')->on('users_adm')->onDelete('cascade'); 

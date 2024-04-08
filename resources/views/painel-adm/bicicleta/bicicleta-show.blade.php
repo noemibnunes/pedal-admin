@@ -1,36 +1,41 @@
 @extends('base')
 
 @section('content')
-  <main class="show-bicicleta">
+  <main class="show">
     <form action="{{ route('show', $bicicleta->id) }}">
       <h1 style="text-align:center; margin-bottom:20px;">Visualizar dados da Bicicletas</h1>
 
-      <div class="form-group">
+      <div class="form-group-view">
           <label for="modelo" class="label">Modelo: </label>
           <input type="text" class="form-control" name="modelo" value="{{ $bicicleta->modelo }}" readonly/>
       </div>
 
-      <div class="form-group">
+      <div class="form-group-view">
           <label for="disponibilidade" class="label">Disponibilidade: </label>
           <input type="text" class="form-control" name="disponibilidade" value="{{ $bicicleta->disponibilidade }}" readonly/>
       </div>
 
-      <div class="form-group">
+      <div class="form-group-view">
           <label for="valor_aluguel" class="label">Valor do aluguel: </label>
           <input type="text" class="form-control" name="valor_aluguel" value="{{ $bicicleta->valor_aluguel }}" readonly/>
       </div>
 
-      <div class="form-group">
+      <div class="form-group-view">
           <label for="tipo" class="label">Tipo: </label>
           <input type="text" class="form-control" name="tipo" value="{{ $bicicleta->tipo }}" readonly/>
       </div>
 
-      <div class="form-group">
+      <div class="form-group-view">
+          <label for="quantidades" class="label">Quantidades: </label>
+          <input type="text" class="form-control" name="quantidades" value="{{ $bicicleta->quantidades }}" readonly/>
+      </div>
+
+      <div class="form-group-view">
           <label for="user" class="label">Usuário: </label>
           <input type="text" class="form-control" name="user" value="{{ $bicicleta->userAdm->name }}" readonly/>
       </div>
 
-      <div class="form-group">
+      <div class="form-group-view">
           <label for="imagem" class="label">Imagem: </label>
           <img id="img" src="{{ asset('storage/' .$bicicleta->imagem) }}" alt="Imagem da Bicicleta">
       </div>

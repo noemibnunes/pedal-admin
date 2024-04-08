@@ -67,8 +67,7 @@ class PlanoController extends Controller
     public function deletePlano(int $id)
     {
         try {
-            $mensagem = $this->planoService->deletePlano($id);
-            return redirect()->back()->withErrors(['success' => $mensagem]);
+            return $this->planoService->deletePlano($id);
         } catch (Exception $exception) {
             return response()->json(['errors' => $exception->getMessage()], 400);
         }

@@ -25,7 +25,7 @@
         @endif
       @endif
 
-      <h1 style="text-align:center; margin-bottom:20px;">Cadastro de Bicicleta</h1>
+      <h1 style="text-align:center; margin-bottom:20px; color:#112412;">Cadastro de Bicicleta</h1>
         @csrf
         <div class="form-group">
             <label for="modelo">Modelo:</label>
@@ -40,6 +40,11 @@
         <div class="form-group">
             <label for="tipo">Tipo:</label>
             <input type="text" name="tipo" class="form-control" placeholder="Tipo">
+        </div>
+
+        <div class="form-group">
+            <label for="quantidades">Quantidades:</label>
+            <input type="text" name="quantidades" class="form-control" placeholder="quantidades">
         </div>
 
         <div class="form-group">
