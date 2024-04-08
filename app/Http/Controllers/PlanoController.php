@@ -72,4 +72,13 @@ class PlanoController extends Controller
             return response()->json(['errors' => $exception->getMessage()], 400);
         }
     }
+
+    public function all()
+    {
+        try {
+            return $this->planoService->getAllPlanos();
+        } catch (Exception $exception) {
+            return response()->json(['errors' => $exception->getMessage()], 400);
+        }
+    }
 }

@@ -13,6 +13,8 @@ Route::get('/', function () {
 Route::get('/cadastro', [UserAdmController::class, 'index'])->name('cadastro');
 Route::get('/login', [UserAdmController::class, 'loginView'])->name('login');
 Route::get('/logout', [UserAdmController::class, 'logout'])->name('logout');
+Route::get('/bicicletas', [BicicletaController::class, 'all'])->name('bicicletas');
+Route::get('/planos', [PlanoController::class, 'all'])->name('planos');
 
 Route::post('/cadastro-adm', [UserAdmController::class, 'cadastro'])->name('cadastro-adm');
 Route::post('/login-adm', [UserAdmController::class, 'login'])->name('login-adm');

@@ -68,4 +68,9 @@ class PlanoService
 
         return redirect()->route('plano-view');
     }
+
+    public function getAllPlanos() 
+    {
+        return Plano::all();
+    }
 }

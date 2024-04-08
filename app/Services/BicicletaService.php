@@ -84,4 +84,9 @@ class BicicletaService
 
         return redirect()->route('bicicleta-view');
     }
+
+    public function getAllBicicletas() 
+    {
+        return Bicicleta::all();
+    }
 }
