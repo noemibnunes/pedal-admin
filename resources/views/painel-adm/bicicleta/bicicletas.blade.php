@@ -16,7 +16,7 @@
             <th>Modelo</th>
             <th>Disponibilidade</th>
             <th>Valor de Aluguel</th>
-            <th>Tipo</th>
+            <th>Descrição</th>
             <th>Quantidades</th>
             <th>Usuário ADM</th>
             <th colspan = 3 style="text-align:center;">Ações</th> </tr>
@@ -27,7 +27,7 @@
             <td>{{ $bicicleta->modelo }}</td>
             <td>{{ $bicicleta->disponibilidade ? 'Disponível' : 'Indisponível' }}</td>
             <td>R$ {{ $bicicleta->valor_aluguel }}</td>
-            <td>{{ $bicicleta->tipo }}</td>
+            <td>{{ $bicicleta->descricao }}</td>
             <td>{{ $bicicleta->quantidades }}</td>
             <td>{{ $bicicleta->userAdm->name }}</td>
             <td> 

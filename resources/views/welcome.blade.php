@@ -1,10 +1,8 @@
 @extends('base')
 
 @section('content')
-  <main class="login">
-    <div class="form-login">
-    <form method="POST" action="/login-adm">
-      @if ($errors->has('success'))
+
+@if ($errors->has('success'))
         <div class="alert alert-success">
           {{ $errors->first('success') }}
           <script>
@@ -23,11 +21,14 @@
             </ul>
           </div>
         @endif
-      @endif
-
+  @endif
+  <main class="login">
+    <div class="form-login">
+      <form method="POST" action="/login-adm" class="form">
+      
       <div style="text-align:center; margin-bottom:20px;">
         <img src="{{ asset('img/icones/logo.svg') }}" alt="Logo" width="150">
-        <h3 style="margin-top: 10px;">ADMIN</h3>
+        <span style="margin-top: 10px;">ADMIN</span>
       </div>
 
         @csrf
@@ -41,6 +42,8 @@
         </div>
 
         <button type="submit" class="btn-primary" onclick="window.location='{{ route('painel-adm') }}'">Login</button>
+        <a type="submit" class="btn-primary" href="{{ route('cadastro') }}">Cadastrar</a>
+
       </div>
   </main>
 @endsection

@@ -38,8 +38,8 @@
         </div>
 
         <div class="form-group">
-            <label for="tipo">Tipo:</label>
-            <input type="text" name="tipo" class="form-control" placeholder="Tipo">
+            <label for="descricao">Descrição:</label>
+            <input type="text" name="descricao" class="form-control" placeholder="Descricao">
         </div>
 
         <div class="form-group">

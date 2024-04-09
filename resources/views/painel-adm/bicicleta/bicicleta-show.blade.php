@@ -21,8 +21,8 @@
       </div>
 
       <div class="form-group-view">
-          <label for="tipo" class="label">Tipo: </label>
-          <input type="text" class="form-control" name="tipo" value="{{ $bicicleta->tipo }}" readonly/>
+          <label for="descricao" class="label">Descrição: </label>
+          <input type="text" class="form-control" name="descricao" value="{{ $bicicleta->descricao }}" readonly/>
       </div>
 
       <div class="form-group-view">

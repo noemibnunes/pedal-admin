@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('modelo');
             $table->string('disponibilidade');
             $table->string('valor_aluguel');
-            $table->string('tipo');
+            $table->string('descricao');
             $table->string('quantidades');
             $table->string('imagem');
             $table->unsignedBigInteger('user_id'); 

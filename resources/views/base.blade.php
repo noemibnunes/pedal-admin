@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pedal - Aluguel de Bicicletas</title>
-    <meta name="description" content="Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para o cliente. Explore o mundo na sua velocidade com a Bikcraft.">
+    <title>Pedal - Admin</title>
     
     <link rel="icon" href="{{ asset('img/icones/ic.svg') }}" type="image/svg+xml">
     <link rel="preload" href="{{ asset('css/style.css') }}" as="style">
@@ -17,7 +16,7 @@
 </head>
 
 <body>
-    <header>
+ <!--   <header>
         <nav>
             <ul>
                 @if (Auth::check())
@@ -25,7 +24,7 @@
                 @endif
             </ul>
         </nav>
-    </header>
+    </header>  -->
 
 
     @yield('content')

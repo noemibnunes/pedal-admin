@@ -38,8 +38,8 @@
       </div>
 
       <div class="form-group">
-          <label for="tipo" class="label">Tipo: </label>
-          <input type="text" class="form-control" name="tipo" value="{{ $bicicleta->tipo }}" required/>
+          <label for="descricao" class="label">Descrição: </label>
+          <input type="text" class="form-control" name="descricao" value="{{ $bicicleta->descricao }}" required/>
       </div>
 
       <div class="form-group">
