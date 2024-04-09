@@ -21,11 +21,6 @@ class UserAdmController extends Controller
         return $this->userAdmService->index();
     }
 
-    public function loginView() 
-    {
-        return $this->userAdmService->loginView();
-    }
-
     public function cadastro(UserAdmRequest $request)
     {
         try {

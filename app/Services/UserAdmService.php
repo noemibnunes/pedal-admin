@@ -13,11 +13,6 @@ class UserAdmService
         return view('cadastro.cadastro');
     }
 
-    public function loginView() 
-    {
-        return view('login.login');
-    }
-
     public function cadastro($request) 
     {
         UserAdm::create([

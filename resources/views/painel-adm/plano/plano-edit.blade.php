@@ -3,6 +3,26 @@
 @section('content')
   <main class="cadastro">
     <form action="{{ route('edit-plano', $plano->id) }}" method="POST" enctype="multipart/form-data">
+    @if ($errors->has('success'))
+        <div class="alert alert-success">
+          {{ $errors->first('success') }}
+          <script>
+              setTimeout(function() {
+                window.location.href = "{{ route('plano-view') }}";
+              }, 2000);
+            </script>
+        </div>
+      @else
+        @if ($errors->any())
+          <div class="alert alert-danger">
+            <ul>
+              @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+              @endforeach
+            </ul>
+          </div>
+        @endif
+      @endif
       <h1 style="text-align:center; margin-bottom:20px;">Edição dos dados do plano</h1>
       @csrf
       @method('PUT')
