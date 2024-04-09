@@ -36,7 +36,7 @@ class BicicletaRequest extends FormRequest
                 'required',
                 'image',
                 'mimes:jpeg,png,jpg,gif',
-                'max:2048'
+                'max:20048868'
             ]
         ];
     }
@@ -60,7 +60,7 @@ class BicicletaRequest extends FormRequest
             'imagem.required' => 'O campo Imagem é obrigatório.',
             'imagem.image' => 'O arquivo enviado deve ser uma imagem.',
             'imagem.mimes' => 'A imagem deve ter um formato JPEG, PNG, JPG ou GIF.',
-            'imagem.max' => 'A imagem não deve ter mais de 2048 kilobytes.'
+            'imagem.max' => 'A imagem não deve ter mais de - kilobytes.'
         ];
     }
 }
