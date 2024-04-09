@@ -214,5 +214,6 @@ return [
     */
 
     'partitioned' => env('SESSION_PARTITIONED_COOKIE', false),
-
+    'key' => env('PEDAL_ADM_APP_KEY'),
+    'cookie' => 'pedal_adm_cookie',
 ];

@@ -27,7 +27,7 @@ class BicicletaRequest extends FormRequest
                 'required', 
                 'numeric'
             ],
-            'tipo' => [
+            'descricao' => [
                 'required', 
                 'string',  
                  
@@ -55,8 +55,8 @@ class BicicletaRequest extends FormRequest
             'modelo.max' => 'O Modelo deve ter no máximo 255 caracteres.',
             'valor_aluguel.required' => 'O campo Valor Aluguel é obrigatório.',
             'valor_aluguel.numeric' => 'O campo Valor Aluguel deve ser um número.',
-            'tipo.required' => 'O campo Tipo é obrigatória.',
-            'tipo.string' => 'O Tipo deve ser um texto.',
+            'descricao.required' => 'O campo Descricao é obrigatória.',
+            'descricao.string' => 'O Descricao deve ser um texto.',
             'imagem.required' => 'O campo Imagem é obrigatório.',
             'imagem.image' => 'O arquivo enviado deve ser uma imagem.',
             'imagem.mimes' => 'A imagem deve ter um formato JPEG, PNG, JPG ou GIF.',
