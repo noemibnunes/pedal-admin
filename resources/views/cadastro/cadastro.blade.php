@@ -6,7 +6,7 @@
           {{ $errors->first('success') }}
           <script>
               setTimeout(function() {
-                window.location.href = "{{ route('welcome') }}";
+                window.location.href = "/";
               }, 2000);
             </script>
         </div>
