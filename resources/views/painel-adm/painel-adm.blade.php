@@ -18,6 +18,14 @@
           <a href="{{ route('plano-view') }}">Acesse</a>
       </div>
       </section>
+
+      <section class="section-painel">
+        <h2>Pontos</h2>
+        <div class="icon-box">
+          <img src="{{ asset('img/icones/address.png') }}" alt="Pontos">
+          <a href="{{ route('ponto-view') }}">Acesse</a>
+      </div>
+      </section>
     </div>
   </main>
 @endsection

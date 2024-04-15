@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PlanoController;
+use App\Http\Controllers\PontoController;
 use App\Http\Controllers\UserAdmController;
 use App\Http\Controllers\BicicletaController;
 
@@ -37,6 +38,15 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::get('/edit-plano-view/{id}', [PlanoController::class, 'editView'])->name('edit-plano-view');
     Route::put('/edit-plano/{id}', [PlanoController::class, 'editarPlano'])->name('edit-plano');
     Route::delete('/delete-plano/{id}', [PlanoController::class, 'deletePlano'])->name('delete-plano');
+
+    ####### PONTO #######
+    Route::get('/ponto-view', [PontoController::class, 'index'])->name('ponto-view');
+    Route::get('/cadastro-ponto-view', [PontoController::class, 'cadastroView'])->name('cadastro-ponto-view');
+    Route::post('/cadastro-ponto', [PontoController::class, 'cadastroPonto'])->name('cadastro-ponto');
+    Route::get('/ponto/{id}', [PontoController::class, 'show'])->name('show-ponto');
+    Route::get('/edit-ponto-view/{id}', [PontoController::class, 'editView'])->name('edit-ponto-view');
+    Route::put('/edit-ponto/{id}', [PontoController::class, 'editarPonto'])->name('edit-ponto');
+    Route::delete('/delete-ponto/{id}', [PontoController::class, 'deletePonto'])->name('delete-ponto');
 
 });
 
