@@ -48,11 +48,12 @@
         </div>
 
         <div class="form input">
-          <input type="file" id="imagem" >
-          <label class="label-file" for="imagem">
-            <span class="text-file">Selecionar imagem</span>
-            <span>Procurar</span>
-          </label>
+          <input type="file" id="imagem" name="imagem">
+            <label class="label-file" for="imagem">
+              <span class="text-file">Selecionar imagem</span>
+              <span>Procurar</span>
+            </label>
+          </input>
         </div>
 
         <button type="submit" class="btn-primary">Cadastrar</button>

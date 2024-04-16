@@ -16,15 +16,16 @@
 </head>
 
 <body>
- <!--   <header>
-        <nav>
-            <ul>
-                @if (Auth::check())
-                    <li><a href="{{ route('logout') }}">Sair</a></li>
-                @endif
-            </ul>
-        </nav>
-    </header>  -->
+        <?php if(auth()->check()): ?>
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="{{ route('logout') }}">Sair</a></li>
+                    </ul>
+                </nav>
+            </header>
+        <?php endif; ?>
+
 
 
     @yield('content')

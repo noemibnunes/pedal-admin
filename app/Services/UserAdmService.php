@@ -43,7 +43,7 @@ class UserAdmService
     public function logout($request)
     {
         Auth::logout();
-        return redirect()->route('login'); 
+        return redirect()->route('/'); 
     }
 
     public function painelAdm() 
