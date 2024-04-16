@@ -78,3 +78,7 @@ function closeModal(modalId) {
   modal.style.display = "none";
 }
 
+document.querySelector('#imagem').addEventListener('change', function () {
+  document.querySelector('.text-file').textContent = this.files[0].name;
+})
+

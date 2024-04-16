@@ -137,6 +137,9 @@ hr {
   .seta-voltar {
     display: flex;
     align-items: center;
+    justify-content: start;
+    text-decoration: underline;
+    margin-left: 150px;
   }
   
   .seta-voltar span {

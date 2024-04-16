@@ -1,8 +1,9 @@
 @extends('base')
 
 @section('content')
-  <main class="cadastro">
-    <form action="{{ route('edit-ponto', $ponto->id) }}" method="POST" enctype="multipart/form-data">
+  <main class="cadastro-form">
+    <div class="form-cadastro">
+    <form action="{{ route('edit-ponto', $ponto->id) }}" method="POST" enctype="multipart/form-data" class="formulario">
     @if ($errors->has('success'))
         <div class="alert alert-success">
           {{ $errors->first('success') }}
@@ -23,7 +24,7 @@
           </div>
         @endif
       @endif
-      <h1 style="text-align:center; margin-bottom:20px;">Edição dos dados do ponto</h1>
+      <h1 class="titulo">Edição dos dados do ponto</h1>
       @csrf
       @method('PUT')
 
@@ -63,10 +64,10 @@
       </div>
 
       <button type="submit" class="btn-primary">Atualizar ponto</button>
-      <a href="javascript:history.go(-1);" class="seta-voltar">
-          <img src="{{ asset('img/icones/seta-voltar.png') }}" alt="Voltar">
-          <span>Voltar</span>
-      </a>
     </form>
+    <a href="javascript:history.go(-1);" class="seta-voltar">
+        <span>Voltar</span>
+    </a>
+    </div>
   </main>
 @endsection()

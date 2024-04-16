@@ -1,9 +1,9 @@
 @extends('base')
 
 @section('content')
-  <main class="cadastro-bicicleta">
+  <main class="cadastro-form">
     <div class="form-cadastro">
-    <form method="POST" action="/cadastro-bicicleta" enctype="multipart/form-data">
+    <form method="POST" action="/cadastro-bicicleta" enctype="multipart/form-data" class="formulario">
       @if ($errors->has('success'))
         <div class="alert alert-success">
           {{ $errors->first('success') }}
@@ -25,37 +25,40 @@
         @endif
       @endif
 
-      <h1 style="text-align:center; margin-bottom:20px; color:#112412;">Cadastro de Bicicleta</h1>
+      <h1 class="titulo">Cadastro de Bicicleta</h1>
         @csrf
-        <div class="form-group">
+        <div class="form input">
             <label for="modelo">Modelo:</label>
-            <input type="text" name="modelo" class="form-control" placeholder="Modelo">
+            <input type="text" name="modelo" class="form-control" placeholder="Bike">
         </div>
 
-        <div class="form-group">
+        <div class="form input">
             <label for="valor_aluguel">Valor de Aluguel:</label>
-            <input type="text" name="valor_aluguel" class="form-control" placeholder="Valor aluguel">
+            <input type="text" name="valor_aluguel" class="form-control" placeholder="5.00">
         </div>
 
-        <div class="form-group">
+        <div class="form input">
             <label for="descricao">Descrição:</label>
-            <input type="text" name="descricao" class="form-control" placeholder="Descricao">
+            <input type="text" name="descricao" class="form-control" placeholder="Bike para passeio">
         </div>
 
-        <div class="form-group">
+        <div class="form input">
             <label for="quantidades">Quantidades:</label>
-            <input type="text" name="quantidades" class="form-control" placeholder="quantidades">
+            <input type="text" name="quantidades" class="form-control" placeholder="10">
         </div>
 
-        <div class="form-group">
-            <label for="imagem">Imagem:</label>
-            <input type="file" name="imagem" class="form-control" placeholder="Imagem">
+        <div class="form input">
+          <input type="file" id="imagem" >
+          <label class="label-file" for="imagem">
+            <span class="text-file">Selecionar imagem</span>
+            <span>Procurar</span>
+          </label>
         </div>
 
         <button type="submit" class="btn-primary">Cadastrar</button>
         </form>
+
         <a href="javascript:history.go(-1);" class="seta-voltar">
-          <img src="{{ asset('img/icones/seta-voltar.png') }}" alt="Voltar">
           <span>Voltar</span>
         </a>
       </div>

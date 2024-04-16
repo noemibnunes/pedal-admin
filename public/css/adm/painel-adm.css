@@ -21,3 +21,9 @@
 .icon-box img {
   width: 100px;
 }
+
+.titulo {
+  text-align: center; 
+  margin-bottom: 20px; 
+  color: #fff;
+}
