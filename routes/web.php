@@ -11,6 +11,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/login', [UserAdmController::class, 'loginView'])->name('login');
+
 Route::get('/cadastro', [UserAdmController::class, 'index'])->name('cadastro');
 Route::get('/logout', [UserAdmController::class, 'logout'])->name('logout');
 Route::get('/bicicletas', [BicicletaController::class, 'all'])->name('bicicletas');

@@ -2,30 +2,48 @@
 
 @section('content')
   <main class="main-painel">
-    <div class ="container">
-      <section class="section-painel">
-        <h2>Bicicletas</h2>
-        <div class="icon-box">
-          <img src="{{ asset('img/icones/bicycle.png') }}" alt="Bicicletas">
-          <a href="{{ route('bicicleta-view') }}">Acesse</a>
-        </div>
-      </section>
-
-      <section class="section-painel">
-        <h2>Planos</h2>
-        <div class="icon-box">
-          <img src="{{ asset('img/icones/plans.png') }}" alt="Planos">
-          <a href="{{ route('plano-view') }}">Acesse</a>
+    <div class="container">
+      <div class="card">
+        <section class="section-painel">
+            <a href="{{ route('bicicleta-view') }}">
+              <h2>Bicicletas</h2>
+            </a>
+            <hr>
+          <div class="icon-box">
+            <a href="{{ route('bicicleta-view') }}">
+              <img src="{{ asset('img/bicicletas/bicicleta4.jpg') }}" alt="Bicicletas">
+            </a>
+          </div>
+        </section>
       </div>
-      </section>
 
-      <section class="section-painel">
-        <h2>Pontos</h2>
-        <div class="icon-box">
-          <img src="{{ asset('img/icones/address.png') }}" alt="Pontos">
-          <a href="{{ route('ponto-view') }}">Acesse</a>
+      <div class="card">
+        <section class="section-painel">
+          <a href="{{ route('plano-view') }}">
+            <h2>Planos</h2>
+          </a>
+          <hr>
+          <div class="icon-box">
+            <a href="{{ route('plano-view') }}">
+              <img src="{{ asset('img/icones/plans.jpg') }}" alt="Planos">
+            </a>
+          </div>
+        </section>
       </div>
-      </section>
+
+      <div class="card">
+        <section class="section-painel">
+          <a href="{{ route('ponto-view') }}">
+            <h2>Pontos</h2>
+          </a>
+          <hr>
+          <div class="icon-box">
+            <a href="{{ route('ponto-view') }}">
+                <img src="{{ asset('img/bicicletas/bicicletario.jpg') }}" alt="Bicicletas">
+            </a>
+          </div>
+        </section>
+      </div>
     </div>
   </main>
 @endsection

@@ -30,6 +30,11 @@ class UserAdmController extends Controller
             return response()->json(['errors' => $exception->getMessage()], 400);
         }
     }
+    
+    public function loginView() 
+    {
+        return $this->userAdmService->loginView();
+    }
 
     public function login(Request $request)
     {

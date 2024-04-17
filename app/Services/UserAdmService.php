@@ -25,6 +25,11 @@ class UserAdmService
         return "Cadastro realizado com sucesso!";
     }
 
+    public function loginView() 
+    {
+        return view('welcome');
+    }
+
     public function login($request)
     {
         if ($request->email && $request->senha) {
