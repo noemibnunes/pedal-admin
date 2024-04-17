@@ -1,37 +1,37 @@
 .container {
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  height: 500px; /* Define a altura da área centralizada */
+  justify-content: center; 
+  align-items: center; 
+  height: 500px; 
 }
 
 .card {
-  border: 1px solid #ccc; /* Adiciona uma borda cinza ao redor do card */
-  border-radius: 8px; /* Arredonda as bordas do card */
-  margin: 0 10px; /* Adiciona um espaçamento lateral entre os cards */
-  padding: 20px; /* Adiciona um espaçamento interno dentro do card */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil */
+  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  margin: 0 10px; 
+  padding: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
   width: 100%;
 }
 
 .section-painel {
-  text-align: center; /* Centraliza o conteúdo dentro do card */
+  text-align: center; 
 }
 
 .icon-box {
-  margin-top: 20px; /* Adiciona um espaçamento superior entre o texto e o ícone */
+  margin-top: 20px; 
 }
 
 .icon-box img {
-  width: 100%; /* Define a largura do ícone */
-  height: auto; /* Mantém a proporção do ícone */
+  width: 100%; 
+  height: auto; 
 }
 
 hr {
-  border: none; /* Remove a borda padrão */
-  height: 1px; /* Define a altura da linha */
-  background-color: #ccc; /* Define a cor da linha */
-  margin: 10px 0; /* Adiciona espaçamento acima e abaixo da linha */
+  border: none; 
+  height: 1px; 
+  background-color: #ccc; 
+  margin: 10px 0; 
   width: 100% !important;
 }
 
