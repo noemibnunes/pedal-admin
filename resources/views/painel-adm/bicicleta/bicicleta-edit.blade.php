@@ -48,6 +48,18 @@
             <input type="text"class="form-control" name="quantidades"  value="{{ $bicicleta->quantidades }}" required>
       </div>
 
+      <div class="form">
+        <label for="ponto_id" class="form-label">Ponto</label>
+        <select class="form-select" id="ponto_id" name="ponto_id">
+          <option value="">Selecione</option>
+            @foreach ($pontos as $ponto)
+              <option value="{{ $ponto->id }}" {{ $ponto->id == $bicicleta->ponto_id ? 'selected' : '' }}>
+                {{ $ponto->descricao }}
+              </option>
+            @endforeach
+        </select>
+      </div>
+
       <div class="form input">
         <img src="{{ asset('storage/' .$bicicleta->imagem) }}" alt="Imagem da Bicicleta" style="margin-top:10px">
         <input type="file" id="imagem" >

@@ -18,6 +18,7 @@
             <th>Valor de Aluguel</th>
             <th>Descrição</th>
             <th>Quantidades</th>
+            <th>Ponto Pedal</th>
             <th>Usuário ADM</th>
             <th colspan = 3 style="text-align:center;">Ações</th> </tr>
         </thead>
@@ -29,6 +30,7 @@
             <td>R$ {{ $bicicleta->valor_aluguel }}</td>
             <td>{{ $bicicleta->descricao }}</td>
             <td>{{ $bicicleta->quantidades }}</td>
+            <td>{{ $bicicleta->ponto->descricao }}</td>
             <td>{{ $bicicleta->userAdm->name }}</td>
             <td> 
               <a href="{{ route('show', $bicicleta->id) }}">

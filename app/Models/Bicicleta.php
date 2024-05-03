@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Models\Ponto;
 use App\Models\UserAdm;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -24,7 +25,8 @@ class Bicicleta extends Model
         'descricao',
         'quantidades',
         'imagem',
-        'user_id'
+        'user_id',
+        'ponto_id'
     ];
 
     ######################
@@ -34,5 +36,10 @@ class Bicicleta extends Model
     public function userAdm()
     {
         return $this->belongsTo(UserAdm::class, 'user_id', 'id');
+    }
+
+    public function ponto()
+    {
+        return $this->belongsTo(Ponto::class, 'ponto_id', 'id');
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\Ponto;
 use App\Models\Bicicleta;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -16,7 +17,8 @@ class BicicletaService
 
     public function cadastroView() 
     {
-        return view('painel-adm.bicicleta.bicicleta-cadastro');
+        $pontos = Ponto::all();
+        return view('painel-adm.bicicleta.bicicleta-cadastro', ['pontos' => $pontos]);
     }
 
     public function cadastroBicicleta($request) 
@@ -29,8 +31,9 @@ class BicicletaService
            'valor_aluguel' => $request->valor_aluguel,
            'descricao' => $request->descricao,
            'quantidades' => $request->quantidades,
-           'user_id' => $user->id
-        ]);
+           'user_id' => $user->id,
+           'ponto_id' => $request->ponto_id
+        ]); 
 
         if ($request->hasFile('imagem')) {
             $imagePath = $request->file('imagem')->store('bicycles', 'public'); 
@@ -45,7 +48,8 @@ class BicicletaService
     public function show($id)
     {
         $bicicleta = Bicicleta::findOrFail($id);
-        return view('painel-adm.bicicleta.bicicleta-show', ['bicicleta' => $bicicleta]);
+        $pontos = Ponto::all();
+        return view('painel-adm.bicicleta.bicicleta-show', ['bicicleta' => $bicicleta, 'pontos' => $pontos]);
     }
 
     public function editarBicicleta($id, $request) 
@@ -56,6 +60,7 @@ class BicicletaService
         $bicicleta->valor_aluguel = $request->valor_aluguel;
         $bicicleta->descricao = $request->descricao;
         $bicicleta->quantidades = $request->quantidades;
+        $bicicleta->ponto_id = $request->ponto_id;
         $bicicleta->user_id = Auth::id();
 
         if ($request->hasFile('imagem')) {
@@ -74,7 +79,8 @@ class BicicletaService
     public function editView($id) 
     {
         $bicicleta = Bicicleta::findOrFail($id);
-        return view('painel-adm.bicicleta.bicicleta-edit', ['bicicleta' => $bicicleta]);
+        $pontos = Ponto::all();
+        return view('painel-adm.bicicleta.bicicleta-edit', ['bicicleta' => $bicicleta, 'pontos' => $pontos]);
     }
 
     public function deleteBicicleta($id)

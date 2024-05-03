@@ -29,15 +29,17 @@ class BicicletaRequest extends FormRequest
             ],
             'descricao' => [
                 'required', 
-                'string',  
-                 
+                'string',      
             ],
             'imagem' => [
                 'required',
                 'image',
                 'mimes:jpeg,png,jpg,gif',
                 'max:20048868'
-            ]
+            ],
+            'ponto_id' => [
+                'required', 
+            ],
         ];
     }
 
@@ -60,7 +62,8 @@ class BicicletaRequest extends FormRequest
             'imagem.required' => 'O campo Imagem é obrigatório.',
             'imagem.image' => 'O arquivo enviado deve ser uma imagem.',
             'imagem.mimes' => 'A imagem deve ter um formato JPEG, PNG, JPG ou GIF.',
-            'imagem.max' => 'A imagem não deve ter mais de - kilobytes.'
+            'imagem.max' => 'A imagem não deve ter mais de - kilobytes.',
+            'ponto_id.required' => 'O campo ponto é obrigatório.',
         ];
     }
 }

@@ -36,6 +36,11 @@
           <input type="text" class="form-control" name="user" value="{{ $bicicleta->userAdm->name }}" readonly/>
       </div>
 
+      <div class="form">
+        <label for="ponto" class="form-label">Ponto</label>
+        <input type="text" id="ponto" name="ponto" value="{{ $bicicleta->ponto->descricao }}" readonly>
+      </div>
+
       <div class="form input">
           <label for="imagem" class="label">Imagem: </label>
           <img id="img" src="{{ asset('storage/' .$bicicleta->imagem) }}" alt="Imagem da Bicicleta">

@@ -48,6 +48,16 @@
         </div>
 
         <div class="form input">
+            <label for="ponto" class="form-label">Ponto</label>
+            <select class="form-select" id="ponto" name="ponto">
+                <option value="">Selecione</option>
+                @foreach ($pontos as $ponto)
+                    <option value="{{ $ponto->id }}">{{ $ponto->descricao }}</option>
+                @endforeach
+            </select>
+        </div>
+
+        <div class="form input">
           <input type="file" id="imagem" name="imagem">
             <label class="label-file" for="imagem">
               <span class="text-file">Selecionar imagem</span>
