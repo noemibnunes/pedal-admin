@@ -49,7 +49,7 @@
 
         <div class="form input">
             <label for="ponto" class="form-label">Ponto</label>
-            <select class="form-select" id="ponto" name="ponto">
+            <select class="form-select" id="ponto" name="ponto_id">
                 <option value="">Selecione</option>
                 @foreach ($pontos as $ponto)
                     <option value="{{ $ponto->id }}">{{ $ponto->descricao }}</option>
