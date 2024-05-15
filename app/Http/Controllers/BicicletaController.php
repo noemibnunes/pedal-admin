@@ -80,4 +80,13 @@ class BicicletaController extends Controller
             return response()->json(['errors' => $exception->getMessage()], 400);
         }
     }
+
+    public function getBicicleta(int $id)
+    {
+        try {
+            return $this->bicicletaService->getBicicleta($id);
+        } catch (Exception $exception) {
+            return response()->json(['errors' => $exception->getMessage()], 400);
+        }
+    }
 }

@@ -95,4 +95,9 @@ class BicicletaService
     {
         return Bicicleta::all();
     }
+
+    public function getBicicleta($id) 
+    {
+        return Bicicleta::findOrFail($id);
+    }
 }
