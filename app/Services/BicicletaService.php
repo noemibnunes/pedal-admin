@@ -100,4 +100,18 @@ class BicicletaService
     {
         return Bicicleta::findOrFail($id);
     }
+
+    public function alugarBicicleta($id) 
+    {
+        $bicicleta = Bicicleta::findOrFail($id);
+
+        if ($bicicleta->quantidades > 0) {
+            $bicicleta->quantidades -= 1;
+            $bicicleta->save();
+            return ['message' => 'Bicicleta alugada com sucesso!'];
+        } else {
+            return ['message' => 'Nenhuma bicicleta disponível para alugar.'];
+        }
+    }
+
 }
