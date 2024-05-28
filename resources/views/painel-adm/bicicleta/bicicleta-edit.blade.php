@@ -43,21 +43,17 @@
           <input type="text" class="form-control" name="descricao" value="{{ $bicicleta->descricao }}" required/>
       </div>
 
-      <div class="form input">
-            <label for="quantidades">Quantidades:</label>
-            <input type="text"class="form-control" name="quantidades"  value="{{ $bicicleta->quantidades }}" required>
-      </div>
-
       <div class="form">
-        <label for="ponto_id" class="form-label">Ponto</label>
-        <select class="form-select" id="ponto_id" name="ponto_id">
-          <option value="">Selecione</option>
-            @foreach ($pontos as $ponto)
-              <option value="{{ $ponto->id }}" {{ $ponto->id == $bicicleta->ponto_id ? 'selected' : '' }}>
-                {{ $ponto->descricao }}
-              </option>
-            @endforeach
-        </select>
+          <label for="pontos" class="form-label">Pontos</label>
+          @foreach ($pontos as $ponto)
+            <div>
+              <label>
+                <input type="checkbox" name="pontos[]" value="{{ $ponto->id }}" {{ in_array($ponto->id, $bicicleta->pontos->pluck('id')->toArray()) ? 'checked' : '' }}>
+                  {{ $ponto->descricao }}
+              </label>
+              <input type="text" name="quantidade_ponto_{{ $ponto->id }}" class="quantidade-ponto" placeholder="Quantidade" value="{{ old("quantidade_ponto_{$ponto->id}", $bicicleta->pontos->find($ponto->id)->pivot->quantidade ?? '') }}">
+            </div>
+          @endforeach
       </div>
 
       <div class="form input">

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use App\Models\UserAdm;
 use App\Models\Endereco;
+use App\Models\Bicicleta;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -37,4 +38,8 @@ class Ponto extends Model
         return $this->belongsTo(UserAdm::class, 'user_id', 'id');
     }
 
+    public function bicicletas()
+    {
+        return $this->belongsToMany(Bicicleta::class, 'bicicleta_ponto')->withPivot('quantidade');
+    }
 }

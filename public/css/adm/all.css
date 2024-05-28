@@ -152,4 +152,11 @@ hr {
     gap: 20px;  
   }
 
-  
+  .toggle-disponibilidade {
+    background: transparent;
+    border-color: transparent;
+  }
+
+  .toggle-disponibilidade img {
+    width: 40px;
+  }

@@ -12,8 +12,8 @@
       </div>
 
       <div class="form input">
-          <label for="disponibilidade" class="label">Disponibilidade: </label>
-          <input type="text" class="form-control" name="disponibilidade" value="{{ $bicicleta->disponibilidade }}" readonly/>
+        <label for="disponibilidade" class="label">Disponibilidade: </label>
+        <input type="text" class="form-control" name="disponibilidade" value="{{ $bicicleta->disponibilidade == 1 ? 'Disponível' : 'Indisponível' }}" readonly/>
       </div>
 
       <div class="form input">
@@ -27,18 +27,18 @@
       </div>
 
       <div class="form input">
-          <label for="quantidades" class="label">Quantidades: </label>
-          <input type="text" class="form-control" name="quantidades" value="{{ $bicicleta->quantidades }}" readonly/>
-      </div>
-
-      <div class="form input">
           <label for="user" class="label">Usuário: </label>
           <input type="text" class="form-control" name="user" value="{{ $bicicleta->userAdm->name }}" readonly/>
       </div>
 
-      <div class="form">
-        <label for="ponto" class="form-label">Ponto</label>
-        <input type="text" id="ponto" name="ponto" value="{{ $bicicleta->ponto->descricao }}" readonly>
+      <div class="form input">
+          <label for="pontos" class="label">Pontos da Pedal:</label>
+          @foreach ($bicicleta->pontos as $ponto)
+              <div>
+                  <label>{{ $ponto->descricao }}</label>
+                  <input type="text" class="form-control" value="{{ $ponto->pivot->quantidade }}" readonly>
+              </div>
+          @endforeach
       </div>
 
       <div class="form input">

@@ -37,9 +37,7 @@ class BicicletaRequest extends FormRequest
                 'mimes:jpeg,png,jpg,gif',
                 'max:20048868'
             ],
-            'ponto_id' => [
-                'required', 
-            ],
+            'ponto_id.*' => ['required']
         ];
     }
 

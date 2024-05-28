@@ -42,6 +42,7 @@ Route::middleware(['web', 'auth'])->group(function () {
     Route::get('/edit-plano-view/{id}', [PlanoController::class, 'editView'])->name('edit-plano-view');
     Route::put('/edit-plano/{id}', [PlanoController::class, 'editarPlano'])->name('edit-plano');
     Route::delete('/delete-plano/{id}', [PlanoController::class, 'deletePlano'])->name('delete-plano');
+    Route::put('/bicicleta-disponibilidade/{id}', [BicicletaController::class, 'bicicletaDisponibilidade'])->name('bicicleta-disponibilidade');
 
     ####### PONTO #######
     Route::get('/ponto-view', [PontoController::class, 'index'])->name('ponto-view');
