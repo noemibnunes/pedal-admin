@@ -17,6 +17,7 @@ Route::get('/cadastro', [UserAdmController::class, 'index'])->name('cadastro');
 Route::get('/logout', [UserAdmController::class, 'logout'])->name('logout');
 Route::get('/bicicletas', [BicicletaController::class, 'all'])->name('bicicletas');
 Route::get('/planos', [PlanoController::class, 'all'])->name('planos');
+Route::get('/plano-show/{id}', [PlanoController::class, 'getPlano']);
 Route::get('/visualizar-bicicleta/{id}', [BicicletaController::class, 'getBicicleta'])->name('bicicleta');
 Route::get('/alugar-bicicleta/{id}', [BicicletaController::class, 'alugarBicicleta'])->name('alugar-bicicleta');
 

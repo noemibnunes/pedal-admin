@@ -73,4 +73,9 @@ class PlanoService
     {
         return Plano::all();
     }
+
+    public function getPlano($id)
+    {
+        return Plano::findOrFail($id);
+    }
 }
